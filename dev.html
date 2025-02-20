@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISOI: Dev Team</title>
+    <link rel="stylesheet" href="dev_style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <script src="https://kit.fontawesome.com/13ecdd00b3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="isoi_logo.png" alt="logo" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog_home.html">Blogs</a></li>
+                    <li><a href="board.html">Board 2025</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <h1 class="sub-title">Dev Team</h1>
+        </div>
+    </div>
+    <!-- services -->
+    <div id="services">
+        <div class="container">
+            <div class="services-list">
+                <div> 
+                    <img src="dev1.png">
+                    <h2>Ujjwal Hirwani</h2>
+                    <p id="pos">Events Head</p>
+                    <p>I’m Ujjwal, the Events Head of ISOI VIT and the Program Representative for CSBS. I love exploring technology, solving problems, and creating events that bring people together.<br><br>Outside of tech, I enjoy traveling, playing the sitar, and discovering great food. Through ISOI, I aim to make learning interactive, engaging, and fun!</p>
+                    <div id="social">
+                        <a href="https://www.instagram.com/ujjwalhirwani?igsh=cTd4cDUzaXcybXE%3D" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/-ujjwal-hirwani-/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/ujjwal-hirwani" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://ujjwal-hirwani.github.io/Personal-Portfolio/" target="_blank"><i class="fa-solid fa-square-arrow-up-right"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <img src="dev2.png">
+                    <h2>Jaivardhan Singh</h2>
+                    <p id="pos">Core Member</p>
+                    <p>A passionate and curious learner, always eager to explore new ideas and challenges.I enjoy solving problems, building creative projects, and continuously improving my skills.<br><br>I believe in growth through learning and innovation, and I strive to bring creativity and efficiency to everything I do.</p>
+                    <div id="social">
+                        <a href="https://www.instagram.com/jai_yaar/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/jaivardhansingh14/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/JAIVARDHAN1402" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://jaivardhan1402.github.io/PersonalPortFolio/" target="_blank"><i class="fa-solid fa-square-arrow-up-right"></i></a>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemeu = document.getElementById("sidemenu");
+        function openmenu() {
+            sidemeu.style.right = "0";
+        }
+        function closemenu() {
+            sidemeu.style.right = "-200px";
+        }
+    </script>
+</body>
+
+</html>

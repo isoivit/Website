@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISOI-VIT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <script src="https://kit.fontawesome.com/775629a9b4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="vit_logo.png" alt="logo" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="blog_home.html">Blogs</a></li>
+                    <li><a href="board.html">Board 2025</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="dev.html">Dev Team</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+        </div>
+    </div>
+    <!-- about -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1"><img src="group.jpg" alt="my photo"></div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About ISOI</h1>
+                    <p> ISOI-VIT (INSTRUMENT SOCIETY OF INDIA) is a Technical
+                        Chapter which is committed to organizing technical and non
+                       technical events with the aim of enriching technical
+                        knowledge and provide hands-on experience of working in
+                        real time professional environment. At ISOI-VIT, we believe
+                        in fostering a culture of innovation and learning among our
+                        members. Our prior experiences include organizing highly
+                        successful events like Arduinova technical workshops and
+                        ideathons.
+                       </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Our Mission</p>
+                        <p class="tab-links" onclick="opentab('experience')">Our Vision</p>
+                        <p class="tab-links" onclick="opentab('education')">Events</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Knowledge & Skill Development</span><br>Promote technical learning and interdisciplinary collaboration.</li>
+                            <li><span>Practical Exposure</span><br>Organize workshops, seminars, and industry interactions.</li>
+                            <li><span>Research & Innovation</span><br>Encourage problem-solving for real-world challenges.</li>
+                            <li><span>Community Building</span><br>Foster learning and engagement in instrumentation and automation.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Innovation in Instrumentation</span><br>Drive excellence in automation and control.</li>
+                            <li><span>Academia-Industry Link</span><br>Strengthen collaboration for technological growth.</li>
+                            <li><span>Research Culture</span><br>Promote creative problem-solving in engineering.</li>
+                            <li><span>Professional Development</span><br>Equip members with technical expertise.</li>
+                            <li><span>Thriving Community</span><br>Enable knowledge sharing and collaboration.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>November 2024</span><br>BrainWatt – An interactive quiz covering fundamental concepts of electronics and electrical components.</li>
+                            <li><span>October 2024</span><br>TechCanvas – A poster design competition focusing on technology and electrical concepts.</li>
+                            <li><span>September 2024</span><br>IoTUnleashed – A hands-on IoT workshop exploring real-world applications and smart device development.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio -->
+    <div id="portfolio">
+        <div class="container">
+            <a href="#" class="btn">Back to Home</a>
+        </div>
+    </div>
+    <!-- contact -->
+    <div id="contact">
+        <div class="copyright">
+            <p>Made with <i class="fa-solid fa-heart" id="heart"></i> for ISOI</p>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemeu = document.getElementById("sidemenu");
+        function openmenu() {
+            sidemeu.style.right = "0";
+        }
+        function closemenu() {
+            sidemeu.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>
